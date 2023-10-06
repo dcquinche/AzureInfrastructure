@@ -91,7 +91,7 @@ Now, you can plan and deploy the project using the following commands and enteri
   ```
 
   ```
-  terraform apply solution.plan
+  terraform apply "solution.plan"
   ```
 
 At the end, you could use the next command to destroy all the resources previously created.
