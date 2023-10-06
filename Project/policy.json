@@ -1,0 +1,9 @@
+{
+  "if": {
+    "value": "[empty(field('tags'))]",
+    "equals": "True"
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
