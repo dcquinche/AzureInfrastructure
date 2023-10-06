@@ -23,8 +23,6 @@ For this project, you will write a Packer template and a Terraform template to d
  4. [Terraform Resources](#terraform-resources)
 
 #### Content
-You can find all the project files in the project folder and some screenshots of the process and the results in the assets folder.
-
 In the project folder, you can find:
  - the policy.json file: which contains the policy rule to deny deployments that don't have tags.
  - the server.json file: which contains the builders, variables and provisioners to create the packer image.
@@ -46,7 +44,7 @@ In the Assets folder, you can find two folders (CLI and Portal) with screenshots
   ```
 
 #### Packer Image
-  First, you should export the environment variables. For this project, make sure you export the ARM_CLIENT_ID, ARM_CLIENT_SECRET and ARM_SUBSCRIPTION_ID variables. In a linux system you could do it like this.
+  First, you should export the environment variables. For this project, make sure you export the ARM_CLIENT_ID, ARM_CLIENT_SECRET and ARM_SUBSCRIPTION_ID variables. In a Linux System you could do it like this.
 
   ```
   export ARM_CLIENT_ID=<client-application-id>
@@ -86,7 +84,7 @@ In this case, I deployed the project on an existing resource group, so I importe
   terraform import azurerm_resource_group.<resource-group-name> /subscriptions/<client-subscription-id>/resourceGroups/<resource-group-name>
   ```
 
-Now, you can plan and deploy the project using the following commands.
+Now, you can plan and deploy the project using the following commands and entering the requested variables.
 
   ```
   terraform plan -out solution.plan
@@ -105,9 +103,6 @@ At the end, you could use the next command to destroy all the resources previous
 The process shown above was run in the powershell terminal with the exception of the packer part which was run in the bash terminal.
 
 ### Output
- 1. [The Policy](#the-policy)
- 2. [Packer Image](#packer-image)
- 3. [Terraform Resources](#terraform-resources)
 
 #### The Policy
   Running the following command, you can see the tagging-policy created above.
@@ -119,7 +114,7 @@ The process shown above was run in the powershell terminal with the exception of
   ![Tagging Policy](https://github.com/dcquinche/AzureInfrastructure/blob/main/Assets/CLI/PolicyList.png)
 
 #### Packer Image
-  Running the following command, you can see packer image created above.
+  Running the following command, you can see the packer image created above.
 
   ```
   az image list
